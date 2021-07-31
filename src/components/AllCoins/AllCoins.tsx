@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useGetCoinsQuery } from "../../application/services/coins";
+import { useGetAllCoinsQuery } from "../../application/services/coins";
 import CoinCard from "../CoinCard/CoinCard";
 import {
     AllCoinsContainer,
@@ -21,7 +21,7 @@ type Coin = {
 };
 
 const AllCoins: FC = () => {
-    const { data, isLoading, isError } = useGetCoinsQuery("");
+    const { data, isLoading, isError } = useGetAllCoinsQuery("");
     if (isLoading) {
         return <h1>Loading...</h1>;
     }
