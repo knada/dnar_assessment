@@ -6,10 +6,13 @@ export const coinApi = createApi({
     reducerPath: "coinApi",
     baseQuery: fetchBaseQuery({ baseUrl: apiUrl }),
     endpoints: builder => ({
-        getCoins: builder.query({
+        getAllCoins: builder.query({
             query: () => "coins",
+        }),
+        getCoin: builder.query({
+            query: coin => `coins/${coin}`,
         }),
     }),
 });
 
-export const { useGetCoinsQuery } = coinApi;
+export const { useGetAllCoinsQuery, useGetCoinQuery } = coinApi;
