@@ -4,12 +4,12 @@ import {
     MarketLeadersContainer,
     MarketLeadersHeading,
 } from "./MarketLeaders.styles";
-import { useGetCoinsQuery } from "../../application/services/coins";
+import { useGetAllCoinsQuery } from "../../application/services/coins";
 import MarketLeaderCard from "./MarketLeaderCard/MarketLeaderCard";
 import { Coin } from "../../types";
 
 const MarketLeaders: FC = () => {
-    const { data, isLoading, isError } = useGetCoinsQuery("");
+    const { data, isLoading, isError } = useGetAllCoinsQuery("");
     if (isLoading) {
         return <h1>Loading...</h1>;
     }
