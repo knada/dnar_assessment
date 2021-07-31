@@ -14,4 +14,6 @@ export const EventCardTitle = styled.h3`
     font-size: 1.25rem;
 `;
 
-export const EventCardDescription = styled.p``;
+export const EventCardDescription = styled.p`
+    margin: 1rem 0;
+`;

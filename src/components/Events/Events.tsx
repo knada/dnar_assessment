@@ -1,6 +1,10 @@
 import { FC } from "react";
 import { useGetEventsQuery } from "../../application/services/events";
-import { EventsContainer } from "./Events.styles";
+import {
+    EventsCardsContainer,
+    EventsContainer,
+    EventsHeading,
+} from "./Events.styles";
 import EventCard from "./EventCard/EventCard";
 import { Event } from "../../types";
 
@@ -14,9 +18,12 @@ const Events: FC = () => {
     } else {
         return (
             <EventsContainer>
-                {data.data.map((event: Event) => (
-                    <EventCard key={event.title} event={event} />
-                ))}
+                <EventsHeading>Events</EventsHeading>
+                <EventsCardsContainer>
+                    {data.data.map((event: Event) => (
+                        <EventCard key={event.title} event={event} />
+                    ))}
+                </EventsCardsContainer>
             </EventsContainer>
         );
     }
