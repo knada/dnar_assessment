@@ -8,6 +8,15 @@ import {
     DashboardContainer,
     DashboardContentContainer,
 } from "./Dashboard.styles";
+import { Routes } from "../../routes";
+
+export const DashboardHome: FC = () => (
+    <>
+        <MarketLeaders />
+        <Events />
+        <AllCoins />
+    </>
+);
 
 const Dashboard: FC = () => {
     return (
@@ -15,9 +24,7 @@ const Dashboard: FC = () => {
             <Header />
             <SideBar />
             <DashboardContentContainer>
-                <MarketLeaders />
-                <Events />
-                <AllCoins />
+                <Routes />
             </DashboardContentContainer>
         </DashboardContainer>
     );
