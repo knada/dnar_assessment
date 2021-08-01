@@ -20,7 +20,7 @@ type CoinCardProps = {
 
 const CoinCard: FC<CoinCardProps> = ({ coin }) => {
     return (
-        <CoinCardCointainer>
+        <CoinCardCointainer to={`/coins/${coin.id}`}>
             <CoinSymbol src={coin.image.large} />
             <CoinName>{coin.name}</CoinName>
         </CoinCardCointainer>

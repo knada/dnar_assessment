@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const CoinCardCointainer = styled.div`
+export const CoinCardCointainer = styled(Link)`
     background-color: ${props => props.theme.colors.cardBg};
     /* min-width: 10rem;
     max-width: 20rem; */
