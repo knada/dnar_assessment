@@ -14,7 +14,7 @@ type MarketLeaderCardProps = {
 const MarketLeaderCard: FC<MarketLeaderCardProps> = ({ coin }) => {
     return (
         <MarketLeaderCardContainer>
-            <MarketLeaderCardImage src={coin.image.large} />
+            <MarketLeaderCardImage src={coin.image.small} />
             <MarketLeaderCardName>{coin.name}</MarketLeaderCardName>
             <MarketLeaderCardPrice>
                 {`$ ${coin.market_data.current_price.usd}`}
