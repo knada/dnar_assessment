@@ -6,7 +6,6 @@ export const DashboardContainer = styled.div`
     grid-template-rows: 64px 1fr;
     grid-template-columns: 64px 1fr;
     grid-gap: 1rem;
-    padding: 1rem;
     background-color: ${props => props.theme.colors.dashboardBg};
     @media screen and (max-width: ${props => props.theme.breakpoints.lg}px) {
         grid-template-columns: auto;
@@ -14,7 +13,6 @@ export const DashboardContainer = styled.div`
 `;
 
 export const DashboardContentContainer = styled.div`
-    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr minmax(16rem, 24rem);
     grid-gap: 1rem;
