@@ -9,6 +9,7 @@ import {
     InfoCardFactsContainer,
     InfoCardFactsHeading,
     InfoCardFactsTable,
+    InfoCardFactsTableBody,
     InfoCardFactsTableData,
     InfoCardFactsTableRow,
     InfoCardHeading,
@@ -17,6 +18,7 @@ import {
     InfoCardWebsiteLink,
     SupplyContainer,
     SupplyTable,
+    SupplyTableBody,
     SupplyTableData,
     SupplyTableRow,
 } from "./CoinPage.styles";
@@ -41,7 +43,10 @@ const CoinPage: FC = () => {
     return (
         <CoinPageContainer>
             <CoinPageHeading>{data.name}</CoinPageHeading>
-            <CoinDataVisualition />
+            <CoinDataVisualition
+                id={id}
+                currentPrice={data.market_data.current_price.usd}
+            />
             <InfoCardContainer>
                 <InfoCardHeading>Info Card</InfoCardHeading>
                 <InfoCardDescriptionContainer>
@@ -68,54 +73,58 @@ const CoinPage: FC = () => {
                 <InfoCardFactsContainer>
                     <InfoCardFactsHeading>Facts</InfoCardFactsHeading>
                     <InfoCardFactsTable>
-                        <InfoCardFactsTableRow>
-                            <InfoCardFactsTableData>
-                                Hashing Algorithm
-                            </InfoCardFactsTableData>
-                            <InfoCardFactsTableData>
-                                {data.hashing_algorithm}
-                            </InfoCardFactsTableData>
-                        </InfoCardFactsTableRow>
-                        <InfoCardFactsTableRow>
-                            <InfoCardFactsTableData>
-                                Country Origin
-                            </InfoCardFactsTableData>
-                            <InfoCardFactsTableData>
-                                {data.country_origin
-                                    ? data.country_origin
-                                    : "Unknown"}
-                            </InfoCardFactsTableData>
-                        </InfoCardFactsTableRow>
-                        <InfoCardFactsTableRow>
-                            <InfoCardFactsTableData>
-                                Category
-                            </InfoCardFactsTableData>
-                            <InfoCardFactsTableData>
-                                {data.categories[0]}
-                            </InfoCardFactsTableData>
-                        </InfoCardFactsTableRow>
+                        <InfoCardFactsTableBody>
+                            <InfoCardFactsTableRow>
+                                <InfoCardFactsTableData>
+                                    Hashing Algorithm
+                                </InfoCardFactsTableData>
+                                <InfoCardFactsTableData>
+                                    {data.hashing_algorithm}
+                                </InfoCardFactsTableData>
+                            </InfoCardFactsTableRow>
+                            <InfoCardFactsTableRow>
+                                <InfoCardFactsTableData>
+                                    Country Origin
+                                </InfoCardFactsTableData>
+                                <InfoCardFactsTableData>
+                                    {data.country_origin
+                                        ? data.country_origin
+                                        : "Unknown"}
+                                </InfoCardFactsTableData>
+                            </InfoCardFactsTableRow>
+                            <InfoCardFactsTableRow>
+                                <InfoCardFactsTableData>
+                                    Category
+                                </InfoCardFactsTableData>
+                                <InfoCardFactsTableData>
+                                    {data.categories[0]}
+                                </InfoCardFactsTableData>
+                            </InfoCardFactsTableRow>
+                        </InfoCardFactsTableBody>
                     </InfoCardFactsTable>
                 </InfoCardFactsContainer>
                 <SupplyContainer>
                     <SupplyTable>
-                        <SupplyTableRow>
-                            <SupplyTableData>Total Supply</SupplyTableData>
-                            <SupplyTableData>
-                                {data.market_data.total_supply}
-                            </SupplyTableData>
-                        </SupplyTableRow>
-                        <SupplyTableRow>
-                            <SupplyTableData>Max Supply</SupplyTableData>
-                            <SupplyTableData>
-                                {data.market_data.max_supply}
-                            </SupplyTableData>
-                        </SupplyTableRow>
-                        <SupplyTableRow>
-                            <SupplyTableData>Circulating</SupplyTableData>
-                            <SupplyTableData>
-                                {data.market_data.circulating_supply}
-                            </SupplyTableData>
-                        </SupplyTableRow>
+                        <SupplyTableBody>
+                            <SupplyTableRow>
+                                <SupplyTableData>Total Supply</SupplyTableData>
+                                <SupplyTableData>
+                                    {data.market_data.total_supply}
+                                </SupplyTableData>
+                            </SupplyTableRow>
+                            <SupplyTableRow>
+                                <SupplyTableData>Max Supply</SupplyTableData>
+                                <SupplyTableData>
+                                    {data.market_data.max_supply}
+                                </SupplyTableData>
+                            </SupplyTableRow>
+                            <SupplyTableRow>
+                                <SupplyTableData>Circulating</SupplyTableData>
+                                <SupplyTableData>
+                                    {data.market_data.circulating_supply}
+                                </SupplyTableData>
+                            </SupplyTableRow>
+                        </SupplyTableBody>
                     </SupplyTable>
                 </SupplyContainer>
             </InfoCardContainer>

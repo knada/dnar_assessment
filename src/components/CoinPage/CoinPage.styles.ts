@@ -87,6 +87,8 @@ export const InfoCardFactsTable = styled.div`
     color: white;
 `;
 
+export const InfoCardFactsTableBody = styled.tbody``;
+
 export const InfoCardFactsTableRow = styled.tr`
     width: 100%;
 `;
@@ -110,6 +112,8 @@ export const SupplyTable = styled.table`
     padding: 1rem;
     color: white;
 `;
+
+export const SupplyTableBody = styled.tbody``;
 
 export const SupplyTableRow = styled.tr``;
 
