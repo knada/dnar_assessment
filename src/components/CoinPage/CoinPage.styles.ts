@@ -45,7 +45,7 @@ export const InfoCardDescription = styled.p`
 `;
 
 export const InfoCardLinksCointainer = styled.div`
-    padding: 1rem 2rem;
+    padding: 2rem 1.5rem;
 `;
 
 export const InfoCardWebsiteLink = styled.a`
@@ -55,6 +55,11 @@ export const InfoCardWebsiteLink = styled.a`
     height: 4rem;
     border-radius: 1rem;
     margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.25rem;
+    vertical-align: top;
 `;
 
 export const InfoCardSocialLink = styled.a`

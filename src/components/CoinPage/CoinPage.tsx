@@ -55,9 +55,9 @@ const CoinPage: FC = () => {
                     />
                 </InfoCardDescriptionContainer>
                 <InfoCardLinksCointainer>
-                    <InfoCardWebsiteLink
-                        href={data.links.homepage[0]}
-                    ></InfoCardWebsiteLink>
+                    <InfoCardWebsiteLink href={data.links.homepage[0]}>
+                        Website
+                    </InfoCardWebsiteLink>
                     <InfoCardSocialLink
                         href={data.links.subreddit_url}
                     ></InfoCardSocialLink>
