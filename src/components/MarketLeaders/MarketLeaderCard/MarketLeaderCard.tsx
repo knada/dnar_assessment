@@ -1,7 +1,6 @@
 import { FC } from "react";
 import {
     MarketLeaderCardContainer,
-    MarketLeaderCardImage,
     MarketLeaderCardName,
     MarketLeaderCardPrice,
 } from "./MarketLeaderCard.styles";
@@ -14,10 +13,11 @@ type MarketLeaderCardProps = {
 const MarketLeaderCard: FC<MarketLeaderCardProps> = ({ coin }) => {
     return (
         <MarketLeaderCardContainer>
-            <MarketLeaderCardImage src={coin.image.small} />
-            <MarketLeaderCardName>{coin.name}</MarketLeaderCardName>
+            <MarketLeaderCardName>
+                {coin.name}({coin.symbol.toUpperCase()})
+            </MarketLeaderCardName>
             <MarketLeaderCardPrice>
-                {`$ ${coin.market_data.current_price.usd}`}
+                {`$${coin.market_data.current_price.usd}`}
             </MarketLeaderCardPrice>
         </MarketLeaderCardContainer>
     );

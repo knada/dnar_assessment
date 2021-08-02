@@ -6,8 +6,13 @@ export const MarketLeaderCardContainer = styled.div`
     padding: 1rem;
     margin-bottom: 2rem;
     color: white;
-    display: grid;
-    grid-template-columns: 4rem 35% 35%;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
+        & h3 {
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 export const MarketLeaderCardImage = styled.img`
