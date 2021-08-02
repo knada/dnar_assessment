@@ -23,6 +23,7 @@ import {
 import { useGetCoinQuery } from "../../application/services/coins";
 import { useParams } from "react-router-dom";
 import CoinDataVisualition from "./CoinDataVisualization/CoinDataVisualization";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 type CoinPageParams = {
     id: string;
@@ -32,7 +33,7 @@ const CoinPage: FC = () => {
     const { id } = useParams<CoinPageParams>();
     const { data, isLoading, isError } = useGetCoinQuery(id);
     if (isLoading) {
-        return <h1>Loading...</h1>;
+        return <LoadingIndicator />;
     }
     if (isError) {
         return <h1>Error fetching data</h1>;
