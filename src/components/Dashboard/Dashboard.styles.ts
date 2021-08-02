@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const DashboardContainer = styled.div`
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: 64px 1fr;
-    grid-template-columns: 64px 1fr;
-    grid-gap: 1rem;
+    /* display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-gap: 1rem; */
     background-color: ${props => props.theme.colors.dashboardBg};
     @media screen and (max-width: ${props => props.theme.breakpoints.lg}px) {
         grid-template-columns: auto;
