@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useGetAllCoinsQuery } from "../../application/services/coins";
 import CoinCard from "../CoinCard/CoinCard";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 import {
     AllCoinsContainer,
     AllCoinsHeading,
@@ -23,7 +24,7 @@ type Coin = {
 const AllCoins: FC = () => {
     const { data, isLoading, isError } = useGetAllCoinsQuery("");
     if (isLoading) {
-        return <h1>Loading...</h1>;
+        return <LoadingIndicator />;
     }
     if (isError) {
         return <h1>Error fetching data</h1>;
