@@ -3,7 +3,6 @@ import AllCoins from "../AllCoins/AllCoins";
 import Events from "../Events/Events";
 import Header from "../Header/Header";
 import MarketLeaders from "../MarketLeaders/MarketLeaders";
-import SideBar from "../SideBar/SideBar";
 import {
     DashboardContainer,
     DashboardContentContainer,
@@ -22,7 +21,6 @@ const Dashboard: FC = () => {
     return (
         <DashboardContainer>
             <Header />
-            <SideBar />
             <DashboardContentContainer>
                 <Routes />
             </DashboardContentContainer>
