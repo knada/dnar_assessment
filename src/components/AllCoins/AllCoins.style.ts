@@ -6,6 +6,9 @@ export const AllCoinsContainer = styled.div`
     padding: 2rem;
     border-radius: 2rem;
     grid-column: 1 / span 2;
+    @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
+        padding: 1rem;
+    }
 `;
 
 export const AllCoinsHeading = styled.h2`
@@ -20,4 +23,7 @@ export const CoinCardsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     grid-gap: 1rem;
+    @media screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+        margin: 1rem;
+    }
 `;
