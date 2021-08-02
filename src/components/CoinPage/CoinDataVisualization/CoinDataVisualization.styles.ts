@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const CoinDataVisualizationContainer = styled.div`
     background-color: ${props => props.theme.colors.sectionBg};
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
 `;
 
 export const CoinPrice = styled.h3`
@@ -13,4 +16,5 @@ export const CoinPrice = styled.h3`
 
 export const ChartContainer = styled.div`
     padding: 2rem;
+    min-width: 16rem;
 `;

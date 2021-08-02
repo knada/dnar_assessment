@@ -1,7 +1,6 @@
 import { FC } from "react";
 import {
     CoinPageContainer,
-    CoinPageHeading,
     InfoCardContainer,
     InfoCardDescription,
     InfoCardDescriptionContainer,
@@ -13,6 +12,7 @@ import {
     InfoCardFactsTableData,
     InfoCardFactsTableRow,
     InfoCardHeading,
+    InfoCardImage,
     InfoCardLinksCointainer,
     InfoCardSocialLink,
     InfoCardWebsiteLink,
@@ -42,12 +42,12 @@ const CoinPage: FC = () => {
     }
     return (
         <CoinPageContainer>
-            <CoinPageHeading>{data.name}</CoinPageHeading>
             <CoinDataVisualition
                 id={id}
                 currentPrice={data.market_data.current_price.usd}
             />
             <InfoCardContainer>
+                <InfoCardImage src={data.image.small} />
                 <InfoCardHeading>Info Card</InfoCardHeading>
                 <InfoCardDescriptionContainer>
                     <InfoCardDescriptionTitle>

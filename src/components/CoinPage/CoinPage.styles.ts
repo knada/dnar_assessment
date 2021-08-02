@@ -15,7 +15,11 @@ export const InfoCardContainer = styled.div`
     border-radius: 2rem;
 `;
 
-export const InfoCardImage = styled.img``;
+export const InfoCardImage = styled.img`
+    display: block;
+    height: 3rem;
+    margin: 1rem auto;
+`;
 
 export const InfoCardHeading = styled.h1`
     font-weight: 500;
