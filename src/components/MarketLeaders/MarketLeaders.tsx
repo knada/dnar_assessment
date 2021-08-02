@@ -7,11 +7,12 @@ import {
 import { useGetAllCoinsQuery } from "../../application/services/coins";
 import MarketLeaderCard from "./MarketLeaderCard/MarketLeaderCard";
 import { Coin } from "../../types";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 const MarketLeaders: FC = () => {
     const { data, isLoading, isError } = useGetAllCoinsQuery("");
     if (isLoading) {
-        return <h1>Loading...</h1>;
+        return <LoadingIndicator />;
     }
     if (isError) {
         return <h1>Error fetching data</h1>;
