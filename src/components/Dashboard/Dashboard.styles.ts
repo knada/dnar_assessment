@@ -16,9 +16,8 @@ export const DashboardContentContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr minmax(16rem, 24rem);
     grid-gap: 1rem;
-    @media screen and (max-width: ${props => props.theme.breakpoints.lg}px) {
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 1fr;
+    @media screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+        display: block;
     }
 `;
 

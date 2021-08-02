@@ -6,6 +6,7 @@ export const EventsContainer = styled.div`
     border-radius: 2rem;
     @media screen and (max-width: ${props => props.theme.breakpoints.lg}px) {
         grid-row: 2;
+        margin: 1rem auto;
     }
 `;
 

@@ -1,8 +1,15 @@
 import { FC } from "react";
-import { CoinDataVisualizationContainer } from "./CoinDataVisualization.styles";
+import {
+    CoinDataVisualizationContainer,
+    CoinPrice,
+} from "./CoinDataVisualization.styles";
 
 const CoinDataVisualition: FC = () => {
-    return <CoinDataVisualizationContainer></CoinDataVisualizationContainer>;
+    return (
+        <CoinDataVisualizationContainer>
+            <CoinPrice>$30,000.00</CoinPrice>
+        </CoinDataVisualizationContainer>
+    );
 };
 
 export default CoinDataVisualition;
