@@ -7,11 +7,12 @@ import {
 } from "./Events.styles";
 import EventCard from "./EventCard/EventCard";
 import { Event } from "../../types";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 const Events: FC = () => {
     const { data, isLoading, isError } = useGetEventsQuery("");
     if (isLoading) {
-        return <h1>Loading...</h1>;
+        return <LoadingIndicator />;
     }
     if (isError) {
         return <h1>Error fetching data</h1>;
