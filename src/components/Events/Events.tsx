@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useGetEventsQuery } from "../../application/services/events";
+import { useGetEventsQuery } from "../../application/services/coins";
 import {
     EventsCardsContainer,
     EventsContainer,
