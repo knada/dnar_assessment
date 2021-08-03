@@ -5,8 +5,8 @@ export const CoinPageContainer = styled.div``;
 export const CoinPageHeading = styled.h1``;
 
 export const InfoCardContainer = styled.div`
-    width: 25rem;
-    min-width: 18.75rem;
+    max-width: 25rem;
+    min-width: 14rem;
     background-color: ${props => props.theme.colors.sectionBg};
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -124,4 +124,25 @@ export const SupplyTableRow = styled.tr``;
 export const SupplyTableData = styled.td`
     width: 75%;
     padding: 1rem 0;
+`;
+
+export const RankContainer = styled.div`
+    padding: 1rem;
+    background-color: ${props => props.theme.colors.sectionBg};
+    border-radius: 2rem;
+    font-family: "Inter", "Roboto", sans-serif;
+    color: white;
+`;
+
+export const RankTitle = styled.h3`
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+`;
+
+export const Rank = styled.h3`
+    margin: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
 `;

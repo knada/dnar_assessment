@@ -16,6 +16,9 @@ import {
     InfoCardLinksCointainer,
     InfoCardSocialLink,
     InfoCardWebsiteLink,
+    Rank,
+    RankContainer,
+    RankTitle,
     SupplyContainer,
     SupplyTable,
     SupplyTableBody,
@@ -128,6 +131,10 @@ const CoinPage: FC = () => {
                     </SupplyTable>
                 </SupplyContainer>
             </InfoCardContainer>
+            <RankContainer>
+                <RankTitle>Alexa Rank</RankTitle>
+                <Rank>{data.public_interest_stats.alexa_rank}</Rank>
+            </RankContainer>
         </CoinPageContainer>
     );
 };
