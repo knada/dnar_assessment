@@ -13,6 +13,9 @@ export const coinApi = createApi({
         getCoin: builder.query({
             query: coin => `coins/${coin}`,
         }),
+        getEvents: builder.query({
+            query: () => "events",
+        }),
         getRangeData: builder.query<
             any,
             { coin: string; fromDate: string; toDate: string }
@@ -23,5 +26,9 @@ export const coinApi = createApi({
     }),
 });
 
-export const { useGetAllCoinsQuery, useGetCoinQuery, useGetRangeDataQuery } =
-    coinApi;
+export const {
+    useGetAllCoinsQuery,
+    useGetCoinQuery,
+    useGetEventsQuery,
+    useGetRangeDataQuery,
+} = coinApi;
