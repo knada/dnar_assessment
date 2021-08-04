@@ -13,6 +13,7 @@ import {
 } from "./Exchange.styles";
 
 type ExchangeProps = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     exchangeOptions: any;
     coinSymbol: string;
 };
