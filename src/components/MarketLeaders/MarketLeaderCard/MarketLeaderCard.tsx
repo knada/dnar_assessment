@@ -17,7 +17,9 @@ const MarketLeaderCard: FC<MarketLeaderCardProps> = ({ coin }) => {
                 {coin.name}({coin.symbol.toUpperCase()})
             </MarketLeaderCardName>
             <MarketLeaderCardPrice>
-                {`$${coin.market_data.current_price.usd}`}
+                {`$${parseFloat(coin.market_data.current_price.usd).toFixed(
+                    2,
+                )}`}
             </MarketLeaderCardPrice>
         </MarketLeaderCardContainer>
     );
