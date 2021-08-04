@@ -32,6 +32,9 @@ export const ExchangeValue = styled.input`
     background: none;
     border: none;
     max-width: calc(100% - 10rem);
+    @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const ExchangeSelect = styled.select`
