@@ -29,6 +29,7 @@ import { useGetCoinQuery } from "../../application/services/coins";
 import { useParams } from "react-router-dom";
 import CoinDataVisualition from "./CoinDataVisualization/CoinDataVisualization";
 import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
+import Exchange from "./Exchange/Exchange";
 
 type CoinPageParams = {
     id: string;
@@ -135,6 +136,10 @@ const CoinPage: FC = () => {
                 <RankTitle>Alexa Rank</RankTitle>
                 <Rank>{data.public_interest_stats.alexa_rank}</Rank>
             </RankContainer>
+            <Exchange
+                coinSymbol={data.symbol}
+                exchangeOptions={data.market_data.current_price}
+            />
         </CoinPageContainer>
     );
 };
