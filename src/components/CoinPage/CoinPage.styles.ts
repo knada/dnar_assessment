@@ -31,7 +31,7 @@ export const InfoCardDescriptionContainer = styled.div`
     font-family: "Inter", "Roboto", sans-serif;
     color: white;
     background: ${props => props.theme.colors.cardBg};
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     border-radius: 2rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -40,7 +40,7 @@ export const InfoCardDescriptionContainer = styled.div`
 export const InfoCardDescriptionTitle = styled.h3``;
 
 export const InfoCardDescription = styled.p`
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     line-height: 1.25;
     & a {
         text-decoration: none;
