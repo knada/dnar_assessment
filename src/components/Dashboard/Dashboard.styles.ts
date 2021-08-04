@@ -13,15 +13,24 @@ export const DashboardContainer = styled.div`
 `;
 
 export const DashboardContentContainer = styled.div`
+    /* display: grid;
+    grid-template-columns: 1fr minmax(16rem, 24rem);
+    grid-gap: 1rem;
+    @media screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+        display: block;
+    } */
+`;
+
+export const DashboardContentHeading = styled.h1`
+    font-size: 4rem;
+    font-weight: 500;
+`;
+
+export const DashboardHomeContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr minmax(16rem, 24rem);
     grid-gap: 1rem;
     @media screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
         display: block;
     }
-`;
-
-export const DashboardContentHeading = styled.h1`
-    font-size: 4rem;
-    font-weight: 500;
 `;

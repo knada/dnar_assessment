@@ -6,15 +6,16 @@ import MarketLeaders from "../MarketLeaders/MarketLeaders";
 import {
     DashboardContainer,
     DashboardContentContainer,
+    DashboardHomeContainer,
 } from "./Dashboard.styles";
 import { Routes } from "../../routes";
 
 export const DashboardHome: FC = () => (
-    <>
+    <DashboardHomeContainer>
         <MarketLeaders />
         <Events />
         <AllCoins />
-    </>
+    </DashboardHomeContainer>
 );
 
 const Dashboard: FC = () => {
