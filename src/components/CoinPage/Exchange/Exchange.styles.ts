@@ -31,6 +31,7 @@ export const ExchangeValue = styled.input`
     color: white;
     background: none;
     border: none;
+    max-width: calc(100% - 10rem);
 `;
 
 export const ExchangeSelect = styled.select`
