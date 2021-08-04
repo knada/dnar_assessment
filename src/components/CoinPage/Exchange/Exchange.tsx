@@ -43,13 +43,23 @@ const Exchange: FC<ExchangeProps> = ({ exchangeOptions, coinSymbol }) => {
         event: React.FormEvent<HTMLInputElement>,
     ): void => {
         if (isNumeric(event.currentTarget.value)) {
-            setSellValue(parseInt(event.currentTarget.value));
+            setSellValue(parseFloat(event.currentTarget.value));
+        }
+    };
+
+    const handleBuyValue = (event: React.FormEvent<HTMLInputElement>): void => {
+        if (isNumeric(event.currentTarget.value)) {
+            setBuyValue(parseFloat(event.currentTarget.value));
         }
     };
 
     useEffect(() => {
         setBuyValue(sellValue / exchangeOptions[selectedExchange]);
     }, [exchangeOptions, selectedExchange, sellValue]);
+
+    useEffect(() => {
+        setSellValue(buyValue * exchangeOptions[selectedExchange]);
+    }, [exchangeOptions, selectedExchange, buyValue]);
 
     return (
         <ExchangeContainer>
@@ -80,7 +90,8 @@ const Exchange: FC<ExchangeProps> = ({ exchangeOptions, coinSymbol }) => {
                         value={buyValue}
                         type="number"
                         pattern="^-?[0-9]\d*\.?\d*$"
-                        disabled
+                        onChange={handleBuyValue}
+                        // disabled
                     />
                     <ExchangeSelect>
                         <option value={coinSymbol}>
