@@ -7,7 +7,7 @@ export const AllCoinsContainer = styled.div`
     border-radius: 2rem;
     grid-column: 1 / span 2;
     @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
-        padding: 1rem;
+        padding: 0;
     }
 `;
 
@@ -17,6 +17,11 @@ export const AllCoinsHeading = styled.h2`
     font-weight: 500;
     color: white;
     margin-bottom: 1rem;
+    @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
 `;
 
 export const CoinCardsContainer = styled.div`
