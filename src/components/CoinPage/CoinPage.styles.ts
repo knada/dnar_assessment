@@ -87,7 +87,7 @@ export const InfoCardFactsHeading = styled.h3`
     padding: 1rem;
 `;
 
-export const InfoCardFactsTable = styled.div`
+export const InfoCardFactsTable = styled.table`
     color: white;
 `;
 
