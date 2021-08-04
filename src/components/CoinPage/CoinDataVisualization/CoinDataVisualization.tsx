@@ -43,27 +43,29 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({
         const chartData = data.prices.map((point: number[]) => {
             return {
                 date: format(point[0], "yyyy/MM/dd"),
-                price: point[1],
+                price: point[1].toFixed(2),
             };
         });
         return (
             <CoinDataVisualizationContainer>
                 <CoinPrice>${currentPrice}</CoinPrice>
                 <ChartContainer>
-                    <ResponsiveContainer width="100%" height={400}>
+                    <ResponsiveContainer width="100%" height={300}>
                         <LineChart data={chartData}>
                             <Line
                                 type="monotone"
                                 dataKey="price"
-                                stroke="white"
+                                stroke="#4b75ff"
+                                dot={false}
+                                strokeWidth={2}
                             />
-                            <XAxis dataKey="date" />
+                            <XAxis dataKey="date" tick={true} tickMargin={10} />
                             <YAxis dataKey="price" />
                             <CartesianGrid
                                 vertical={false}
-                                strokeDasharray="3 3"
+                                strokeDasharray="2 8"
                             />
-                            <Tooltip />
+                            <Tooltip payload={chartData} />
                         </LineChart>
                     </ResponsiveContainer>
                 </ChartContainer>
