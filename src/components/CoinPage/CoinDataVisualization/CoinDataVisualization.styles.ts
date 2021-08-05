@@ -10,13 +10,6 @@ export const CoinDataVisualizationContainer = styled.div`
     }
 `;
 
-export const CoinPrice = styled.h3`
-    font-family: "Inter", "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 2.5rem;
-    color: white;
-`;
-
 export const ChartContainer = styled.div`
     padding: 1rem 0;
     min-width: 16rem;
