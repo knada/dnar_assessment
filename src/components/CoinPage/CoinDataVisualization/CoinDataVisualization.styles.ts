@@ -18,7 +18,7 @@ export const CoinPrice = styled.h3`
 `;
 
 export const ChartContainer = styled.div`
-    padding: 2rem;
+    padding: 1rem 0;
     min-width: 16rem;
     @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
         padding: 0;
