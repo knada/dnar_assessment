@@ -46,10 +46,7 @@ const CoinPage: FC = () => {
     }
     return (
         <CoinPageContainer>
-            <CoinDataVisualition
-                id={id}
-                currentPrice={data.market_data.current_price.usd}
-            />
+            <CoinDataVisualition id={id} />
             <InfoCardContainer>
                 <InfoCardImage src={data.image.small} />
                 <InfoCardHeading>Info Card</InfoCardHeading>
