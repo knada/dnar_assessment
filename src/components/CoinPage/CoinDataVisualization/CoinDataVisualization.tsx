@@ -14,18 +14,14 @@ import LoadingIndicator from "../../LoadingIndicator/LoadingIndicator";
 import {
     ChartContainer,
     CoinDataVisualizationContainer,
-    CoinPrice,
 } from "./CoinDataVisualization.styles";
+import ChangePercentage from "./ChangePercentage/ChangePercentage";
 
 type CoinDataVisualitionProps = {
     id: string;
-    currentPrice: string;
 };
 
-const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({
-    id,
-    currentPrice,
-}) => {
+const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
     //placeholder date range
     const fromDate = "1609467149";
     const toDate = "1627783949";
@@ -46,9 +42,24 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({
                 price: point[1].toFixed(2),
             };
         });
+
+        const getPercentageChange = (fromPrice: number, toPrice: number) => {
+            const change = toPrice - fromPrice;
+            const percentageChange = (change / fromPrice) * 100;
+            return percentageChange;
+        };
+
+        const percentageChange = getPercentageChange(
+            chartData[0].price,
+            chartData[chartData.length - 1].price,
+        );
         return (
             <CoinDataVisualizationContainer>
-                <CoinPrice>${currentPrice}</CoinPrice>
+                {/* <CoinPrice>${chartData[chartData.length - 1].price}</CoinPrice> */}
+                <ChangePercentage
+                    endPrice={chartData[chartData.length - 1].price}
+                    percentageChange={percentageChange}
+                />
                 <ChartContainer>
                     <ResponsiveContainer width="100%" height={300}>
                         <LineChart data={chartData}>
@@ -60,7 +71,7 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({
                                 strokeWidth={2}
                             />
                             <XAxis dataKey="date" tick={true} tickMargin={10} />
-                            <YAxis dataKey="price" />
+                            <YAxis dataKey="price" tickMargin={10} />
                             <CartesianGrid
                                 vertical={false}
                                 strokeDasharray="2 8"
