@@ -38,7 +38,7 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
     } else {
         const chartData = data.prices.map((point: number[]) => {
             return {
-                date: format(point[0], "yy MMM dd"),
+                date: format(point[0], "dd MMM yy"),
                 price: point[1].toFixed(2),
             };
         });
