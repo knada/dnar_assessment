@@ -38,7 +38,7 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
     } else {
         const chartData = data.prices.map((point: number[]) => {
             return {
-                date: format(point[0], "yyyy/MM/dd"),
+                date: format(point[0], "yy MMM dd"),
                 price: point[1].toFixed(2),
             };
         });
@@ -69,8 +69,16 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
                                 dot={false}
                                 strokeWidth={2}
                             />
-                            <XAxis dataKey="date" tick={true} tickMargin={10} />
-                            <YAxis dataKey="price" tickMargin={10} />
+                            <XAxis
+                                dataKey="date"
+                                tick={{ fontSize: 12, fill: "white" }}
+                                tickMargin={10}
+                            />
+                            <YAxis
+                                dataKey="price"
+                                tickMargin={10}
+                                tick={{ fontSize: 12, fill: "white" }}
+                            />
                             <CartesianGrid
                                 vertical={false}
                                 strokeDasharray="2 8"
