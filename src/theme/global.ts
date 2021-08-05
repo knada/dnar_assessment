@@ -8,9 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Inter', 'Roboto', sans-serif;
         font-size: 16px;
         font-style: normal;
+        color: white;
         text-rendering: optimizeLegibility;
         position: relative;
     }
