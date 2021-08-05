@@ -10,6 +10,13 @@ export const CoinDataVisualizationContainer = styled.div`
     }
 `;
 
+export const ChartHeader = styled.div`
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+        display: flex;
+        align-items: center;
+    }
+`;
+
 export const ChartContainer = styled.div`
     padding: 1rem 0;
     min-width: 16rem;
