@@ -55,7 +55,6 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
         );
         return (
             <CoinDataVisualizationContainer>
-                {/* <CoinPrice>${chartData[chartData.length - 1].price}</CoinPrice> */}
                 <ChangePercentage
                     endPrice={chartData[chartData.length - 1].price}
                     percentageChange={percentageChange}
