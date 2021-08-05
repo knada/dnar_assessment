@@ -71,4 +71,10 @@ export const ExchangeButton = styled.button`
     text-align: left;
     font-family: "Inter", "Roboto", sans-serif;
     font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+        transition: 0.5s;
+        background-color: #1a4fff;
+    }
 `;
