@@ -17,17 +17,20 @@ const DateRange: FC = () => {
             From:
             <div>
                 <DatePicker
+                    dateFormat="dd MMM yy"
                     selected={fromDate}
                     selectsStart
                     onChange={(date: Date) => setFromDate(date)}
                     startDate={fromDate}
                     endDate={toDate}
                     minDate={new Date("2009")}
+                    maxDate={new Date()}
                 />
             </div>
             To:
             <div>
                 <DatePicker
+                    dateFormat="dd MMM yy"
                     selected={toDate}
                     selectsEnd
                     onChange={(date: Date) => setToDate(date)}
