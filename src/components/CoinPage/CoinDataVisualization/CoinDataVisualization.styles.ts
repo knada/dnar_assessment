@@ -6,7 +6,7 @@ export const CoinDataVisualizationContainer = styled.div`
     border-radius: 2rem;
     margin: 1rem 0;
     @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
-        padding: 1rem;
+        padding: 1rem 0;
     }
 `;
 
