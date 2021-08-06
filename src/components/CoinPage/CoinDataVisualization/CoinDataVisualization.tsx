@@ -31,14 +31,18 @@ type CoinDataVisualitionProps = {
 
 const TooltipContainer = styled.div`
     background-color: ${props => props.theme.colors.buttonBg};
-    padding: 1.5rem;
+    opacity: 0.8;
+    padding: 1rem;
     border-radius: 1rem;
     text-align: center;
 `;
 
 const TooltipPrice = styled.p`
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const TooltipDate = styled.p`
@@ -115,11 +119,11 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
                             <XAxis
                                 dataKey="date"
                                 tick={{ fontSize: 12, fill: "white" }}
-                                tickMargin={10}
+                                tickMargin={5}
                             />
                             <YAxis
                                 dataKey="price"
-                                tickMargin={10}
+                                tickMargin={5}
                                 tick={{ fontSize: 12, fill: "white" }}
                             />
                             <CartesianGrid
