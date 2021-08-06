@@ -47,7 +47,7 @@ const ChangePercentage: FC<ChangePercentageProps> = ({
             <ChangeContainer>
                 <CoinPrice>${endPrice}</CoinPrice>
                 <ChangeValue change="down">
-                    -{percentageChange.toFixed(2)}%
+                    {percentageChange.toFixed(2)}%
                 </ChangeValue>
                 <TrendDown />
             </ChangeContainer>
