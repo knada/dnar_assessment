@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import sub from "date-fns/sub";
 
 const dateSlice = createSlice({
     name: "date",
     initialState: {
-        fromDate: new Date().toISOString(),
+        fromDate: sub(new Date(), { days: 91 }).toISOString(),
         toDate: new Date().toISOString(),
     },
     reducers: {
