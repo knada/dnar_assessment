@@ -1,7 +1,12 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import DatePicker from "react-datepicker";
+import { useAppDispatch, useAppSelector } from "../../../../application/hooks";
 import "react-datepicker/dist/react-datepicker.css";
+import {
+    setFromDate,
+    setToDate,
+} from "../../../../application/features/dateSlice";
 
 const DateRangeContainer = styled.div`
     @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
@@ -10,8 +15,11 @@ const DateRangeContainer = styled.div`
 `;
 
 const DateRange: FC = () => {
-    const [fromDate, setFromDate] = useState(new Date());
-    const [toDate, setToDate] = useState(new Date());
+    // const [fromDate, setFromDate] = useState(new Date());
+    // const [toDate, setToDate] = useState(new Date());
+    const { fromDate, toDate } = useAppSelector(state => state.date);
+    const dispatch = useAppDispatch();
+
     return (
         <DateRangeContainer>
             From:
@@ -20,7 +28,7 @@ const DateRange: FC = () => {
                     dateFormat="dd MMM yy"
                     selected={fromDate}
                     selectsStart
-                    onChange={(date: Date) => setFromDate(date)}
+                    onChange={(date: Date) => dispatch(setFromDate(date))}
                     startDate={fromDate}
                     endDate={toDate}
                     minDate={new Date("2009")}
@@ -33,7 +41,7 @@ const DateRange: FC = () => {
                     dateFormat="dd MMM yy"
                     selected={toDate}
                     selectsEnd
-                    onChange={(date: Date) => setToDate(date)}
+                    onChange={(date: Date) => dispatch(setToDate(date))}
                     startDate={fromDate}
                     endDate={toDate}
                     minDate={fromDate}
