@@ -10,6 +10,7 @@ import {
     YAxis,
 } from "recharts";
 import format from "date-fns/format";
+import getUnixTime from "date-fns/getUnixTime";
 import { useGetRangeDataQuery } from "../../../application/services/coins";
 import LoadingIndicator from "../../LoadingIndicator/LoadingIndicator";
 import {
@@ -24,6 +25,7 @@ import {
     ValueType,
 } from "recharts/types/component/DefaultTooltipContent";
 import styled from "styled-components";
+import { useAppSelector } from "../../../application/hooks";
 
 type CoinDataVisualitionProps = {
     id: string;
@@ -67,8 +69,10 @@ const CustomTooltip = ({
 
 const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
     //placeholder date range
-    const fromDate = "1609467149";
-    const toDate = "1627783949";
+    // const fromDate = "1609467149";
+    // const toDate = "1627783949";
+    const fromDate = getUnixTime(useAppSelector(state => state.date.fromDate));
+    const toDate = getUnixTime(useAppSelector(state => state.date.toDate));
     const { data, isLoading, isError } = useGetRangeDataQuery({
         coin: id,
         fromDate,
