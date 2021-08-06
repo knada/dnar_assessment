@@ -18,7 +18,7 @@ export const coinApi = createApi({
         }),
         getRangeData: builder.query<
             any,
-            { coin: string; fromDate: string; toDate: string }
+            { coin: string; fromDate: string | number; toDate: string | number }
         >({
             query: ({ coin, fromDate, toDate }) =>
                 `coins/${coin}/market_chart/range?vs_currency=usd&from=${fromDate}&to=${toDate}`,
