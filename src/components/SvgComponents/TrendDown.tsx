@@ -5,7 +5,9 @@ type TrendProps = {
     color?: string;
 };
 
-const StyledSvg = styled.svg``;
+const StyledSvg = styled.svg`
+    height: 30px;
+`;
 
 const TrendDown: FC<TrendProps> = ({ color = "red" }) => (
     <StyledSvg viewBox="0 0 24 24" strokeWidth={1.5} stroke={color} fill="none">
