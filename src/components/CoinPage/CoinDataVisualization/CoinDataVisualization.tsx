@@ -121,10 +121,6 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
                     ) : (
                         "No data over this period"
                     )}
-                    {/* <ChangePercentage
-                        endPrice={chartData[chartData.length - 1].price}
-                        percentageChange={percentageChange}
-                    /> */}
                     <DateRange />
                 </ChartHeader>
                 <ChartContainer>
