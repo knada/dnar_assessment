@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import DatePicker from "react-datepicker";
+import parseISO from "date-fns/parseISO";
 import { useAppDispatch, useAppSelector } from "../../../../application/hooks";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -24,11 +25,13 @@ const DateRange: FC = () => {
             <div>
                 <DatePicker
                     dateFormat="dd MMM yy"
-                    selected={fromDate}
+                    selected={parseISO(fromDate)}
                     selectsStart
-                    onChange={(date: Date) => dispatch(setFromDate(date))}
-                    startDate={fromDate}
-                    endDate={toDate}
+                    onChange={(date: Date) =>
+                        dispatch(setFromDate(date.toISOString()))
+                    }
+                    startDate={parseISO(fromDate)}
+                    endDate={parseISO(toDate)}
                     minDate={new Date("2009")}
                     maxDate={new Date()}
                 />
@@ -37,12 +40,14 @@ const DateRange: FC = () => {
             <div>
                 <DatePicker
                     dateFormat="dd MMM yy"
-                    selected={toDate}
+                    selected={parseISO(toDate)}
                     selectsEnd
-                    onChange={(date: Date) => dispatch(setToDate(date))}
-                    startDate={fromDate}
-                    endDate={toDate}
-                    minDate={fromDate}
+                    onChange={(date: Date) =>
+                        dispatch(setToDate(date.toISOString()))
+                    }
+                    startDate={parseISO(fromDate)}
+                    endDate={parseISO(toDate)}
+                    minDate={parseISO(fromDate)}
                     maxDate={new Date()}
                 />
             </div>
