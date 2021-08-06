@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import format from "date-fns/format";
 import getUnixTime from "date-fns/getUnixTime";
+import parseISO from "date-fns/parseISO";
 import { useGetRangeDataQuery } from "../../../application/services/coins";
 import LoadingIndicator from "../../LoadingIndicator/LoadingIndicator";
 import {
@@ -71,8 +72,12 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
     //placeholder date range
     // const fromDate = "1609467149";
     // const toDate = "1627783949";
-    const fromDate = getUnixTime(useAppSelector(state => state.date.fromDate));
-    const toDate = getUnixTime(useAppSelector(state => state.date.toDate));
+    const fromDate = getUnixTime(
+        parseISO(useAppSelector(state => state.date.fromDate)),
+    );
+    const toDate = getUnixTime(
+        parseISO(useAppSelector(state => state.date.toDate)),
+    );
     const { data, isLoading, isError } = useGetRangeDataQuery({
         coin: id,
         fromDate,
@@ -97,17 +102,29 @@ const CoinDataVisualition: FC<CoinDataVisualitionProps> = ({ id }) => {
             return percentageChange;
         };
 
-        const percentageChange = getPercentageChange(
-            chartData[0].price,
-            chartData[chartData.length - 1].price,
-        );
+        const percentageChange =
+            chartData.length > 0
+                ? getPercentageChange(
+                      chartData[0].price,
+                      chartData[chartData.length - 1].price,
+                  )
+                : 0;
+
         return (
             <CoinDataVisualizationContainer>
                 <ChartHeader>
-                    <ChangePercentage
+                    {chartData.length > 0 ? (
+                        <ChangePercentage
+                            endPrice={chartData[chartData.length - 1].price}
+                            percentageChange={percentageChange}
+                        />
+                    ) : (
+                        "No data over this period"
+                    )}
+                    {/* <ChangePercentage
                         endPrice={chartData[chartData.length - 1].price}
                         percentageChange={percentageChange}
-                    />
+                    /> */}
                     <DateRange />
                 </ChartHeader>
                 <ChartContainer>
