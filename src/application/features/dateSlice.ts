@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const dateSlice = createSlice({
     name: "date",
     initialState: {
-        fromDate: new Date(),
-        toDate: new Date(),
+        fromDate: new Date().toISOString(),
+        toDate: new Date().toISOString(),
     },
     reducers: {
         setFromDate: (state, action) => {
