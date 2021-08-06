@@ -15,8 +15,6 @@ const DateRangeContainer = styled.div`
 `;
 
 const DateRange: FC = () => {
-    // const [fromDate, setFromDate] = useState(new Date());
-    // const [toDate, setToDate] = useState(new Date());
     const { fromDate, toDate } = useAppSelector(state => state.date);
     const dispatch = useAppDispatch();
 
