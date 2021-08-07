@@ -19,4 +19,9 @@ export const DashboardHomeContainer = styled.div`
     @media screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
         display: block;
     } */
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 1rem;
+    }
 `;

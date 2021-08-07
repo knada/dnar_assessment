@@ -8,6 +8,9 @@ export const EventsContainer = styled.div`
         margin: 1rem auto;
         padding: 1rem;
     } */
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+        grid-column: span 3;
+    }
 `;
 
 export const EventsHeading = styled.h2`

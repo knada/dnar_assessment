@@ -13,6 +13,9 @@ export const MarketLeadersContainer = styled.div`
     background-color: ${props => props.theme.colors.sectionBg};
     padding: 0.5rem;
     border-radius: 2rem;
+    @media screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+        grid-column: span 5;
+    }
 `;
 
 export const MarketLeadersHeading = styled.h2`
