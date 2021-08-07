@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const AllCoinsContainer = styled.div`
-    margin-top: 2rem;
     background-color: ${props => props.theme.colors.sectionBg};
     padding: 2rem;
     border-radius: 2rem;
@@ -12,10 +11,8 @@ export const AllCoinsContainer = styled.div`
 `;
 
 export const AllCoinsHeading = styled.h2`
-    font-family: "Inter", "Roboto", sans-serif;
     font-size: 3rem;
     font-weight: 500;
-    color: white;
     margin-bottom: 1rem;
     @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
         text-align: center;

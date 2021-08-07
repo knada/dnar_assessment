@@ -23,13 +23,10 @@ export const InfoCardImage = styled.img`
 
 export const InfoCardHeading = styled.h1`
     font-weight: 500;
-    color: white;
     padding: 1rem;
 `;
 
 export const InfoCardDescriptionContainer = styled.div`
-    font-family: "Inter", "Roboto", sans-serif;
-    color: white;
     background: ${props => props.theme.colors.cardBg};
     padding: 1.5rem 1rem;
     border-radius: 2rem;
@@ -80,10 +77,8 @@ export const InfoCardFactsContainer = styled.div`
 `;
 
 export const InfoCardFactsHeading = styled.h3`
-    font-family: "Inter", "Roboto", sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
-    color: white;
     padding: 1rem;
 `;
 
@@ -130,8 +125,6 @@ export const RankContainer = styled.div`
     padding: 1rem;
     background-color: ${props => props.theme.colors.sectionBg};
     border-radius: 2rem;
-    font-family: "Inter", "Roboto", sans-serif;
-    color: white;
 `;
 
 export const RankTitle = styled.h3`

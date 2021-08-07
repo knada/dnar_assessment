@@ -12,10 +12,8 @@ export const EventsContainer = styled.div`
 `;
 
 export const EventsHeading = styled.h2`
-    font-family: "Inter", "Roboto", sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    color: white;
     margin: 1rem 0;
 `;
 

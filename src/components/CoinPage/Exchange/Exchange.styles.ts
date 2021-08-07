@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ExchangeContainer = styled.div`
     background-color: ${props => props.theme.colors.sectionBg};
-    color: white;
     margin-top: 1rem;
     padding: 2rem;
     border-radius: 2rem;

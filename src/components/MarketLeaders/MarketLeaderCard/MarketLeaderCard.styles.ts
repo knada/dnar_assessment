@@ -21,13 +21,11 @@ export const MarketLeaderCardImage = styled.img`
 `;
 
 export const MarketLeaderCardName = styled.h3`
-    font-family: "Inter", "Roboto", sans-serif;
     font-size: 2rem;
     font-weight: 500;
 `;
 
 export const MarketLeaderCardPrice = styled.h3`
-    font-family: "Inter", "Roboto", sans-serif;
     font-size: 2rem;
     font-weight: 500;
 `;

@@ -19,10 +19,8 @@ const ChangeContainer = styled.div`
 `;
 
 const CoinPrice = styled.h3`
-    font-family: "Inter", "Roboto", sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
-    color: white;
     @media screen and (min-width: ${props => props.theme.breakpoints.lg}px) {
         font-size: 2.5rem;
     }

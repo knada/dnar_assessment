@@ -13,10 +13,8 @@ export const MarketLeadersContainer = styled.div`
 `;
 
 export const MarketLeadersHeading = styled.h2`
-    font-family: "Inter", "Roboto", sans-serif;
     font-size: 3rem;
     font-weight: 500;
-    color: white;
     margin-bottom: 1rem;
     @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
         font-size: 2rem;
