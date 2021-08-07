@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const CoinCardCointainer = styled(Link)`
     background-color: ${props => props.theme.colors.cardBg};
+    color: white;
     text-align: center;
     padding: 1rem;
     border-radius: 1rem;
