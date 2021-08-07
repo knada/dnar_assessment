@@ -16,13 +16,11 @@ export const MarketLeaderCardImage = styled.img`
 `;
 
 export const MarketLeaderCardName = styled.h3`
-    font-size: 1.5rem;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 500;
 `;
 
 export const MarketLeaderCardPrice = styled.h3`
-    font-size: 1.5rem;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 500;
 `;
