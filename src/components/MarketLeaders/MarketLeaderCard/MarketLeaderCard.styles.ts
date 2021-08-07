@@ -8,11 +8,6 @@ export const MarketLeaderCardContainer = styled.div`
     color: white;
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
-        & h3 {
-            font-size: 1.5rem;
-        }
-    }
 `;
 
 export const MarketLeaderCardImage = styled.img`
@@ -21,11 +16,13 @@ export const MarketLeaderCardImage = styled.img`
 `;
 
 export const MarketLeaderCardName = styled.h3`
+    font-size: 1.5rem;
     font-size: 2rem;
     font-weight: 500;
 `;
 
 export const MarketLeaderCardPrice = styled.h3`
+    font-size: 1.5rem;
     font-size: 2rem;
     font-weight: 500;
 `;
