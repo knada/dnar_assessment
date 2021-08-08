@@ -5,8 +5,9 @@ export const CoinPageContainer = styled.div``;
 export const CoinPageHeading = styled.h1``;
 
 export const InfoCardContainer = styled.div`
-    max-width: 25rem;
-    min-width: 14rem;
+    position: relative;
+    /* max-width: 25rem;
+    min-width: 14rem; */
     background-color: ${props => props.theme.colors.sectionBg};
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -16,9 +17,15 @@ export const InfoCardContainer = styled.div`
 `;
 
 export const InfoCardImage = styled.img`
+    background-color: white;
+    width: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
     display: block;
     height: 3rem;
-    margin: 1rem auto;
+    position: absolute;
+    right: 2rem;
+    top: -1rem;
 `;
 
 export const InfoCardHeading = styled.h1`
