@@ -10,7 +10,7 @@ export const Routes: FC = () => {
             <Route exact path="/">
                 <DashboardHome />
             </Route>
-            <Route path="/coins">
+            <Route exact path="/coins">
                 <AllCoins />
             </Route>
             <Route path="/coins/:id">
