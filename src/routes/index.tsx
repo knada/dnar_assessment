@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Route, Switch } from "react-router";
+import AllCoins from "../components/AllCoins/AllCoins";
 import CoinPage from "../components/CoinPage/CoinPage";
 import { DashboardHome } from "../components/Dashboard/Dashboard";
 
@@ -8,6 +9,9 @@ export const Routes: FC = () => {
         <Switch>
             <Route exact path="/">
                 <DashboardHome />
+            </Route>
+            <Route path="/coins">
+                <AllCoins />
             </Route>
             <Route path="/coins/:id">
                 <CoinPage />
