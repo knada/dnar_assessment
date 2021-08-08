@@ -54,11 +54,15 @@ const CoinPage: FC = () => {
                     <InfoCardDescriptionTitle>
                         Description:
                     </InfoCardDescriptionTitle>
-                    <InfoCardDescription
-                        dangerouslySetInnerHTML={{
-                            __html: data.description.en,
-                        }}
-                    />
+                    {data.description.en ? (
+                        <InfoCardDescription
+                            dangerouslySetInnerHTML={{
+                                __html: data.description.en,
+                            }}
+                        />
+                    ) : (
+                        "No description given"
+                    )}
                 </InfoCardDescriptionContainer>
                 <InfoCardLinksCointainer>
                     <InfoCardWebsiteLink href={data.links.homepage[0]}>
@@ -80,7 +84,9 @@ const CoinPage: FC = () => {
                                     Hashing Algorithm
                                 </InfoCardFactsTableData>
                                 <InfoCardFactsTableData>
-                                    {data.hashing_algorithm}
+                                    {data.hashing_algorithm
+                                        ? data.hashing_algorithim
+                                        : "Unknown"}
                                 </InfoCardFactsTableData>
                             </InfoCardFactsTableRow>
                             <InfoCardFactsTableRow>
