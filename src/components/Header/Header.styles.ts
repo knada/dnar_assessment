@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
     background-color: ${props => props.theme.colors.dashboardBg};
-    grid-column: 2;
     padding: 1rem;
 `;
 
