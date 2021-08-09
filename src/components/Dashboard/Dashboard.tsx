@@ -9,6 +9,7 @@ import {
     DashboardHomeContainer,
 } from "./Dashboard.styles";
 import { Routes } from "../../routes";
+import SideBar from "../SideBar/SideBar";
 
 export const DashboardHome: FC = () => (
     <DashboardHomeContainer>
@@ -22,6 +23,7 @@ const Dashboard: FC = () => {
     return (
         <DashboardContainer>
             <Header />
+            <SideBar />
             <DashboardContentContainer>
                 <Routes />
             </DashboardContentContainer>
