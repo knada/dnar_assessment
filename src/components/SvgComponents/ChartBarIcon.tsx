@@ -13,7 +13,7 @@ const ChartBarIcon: FC<IconProps> = ({ iconStyle }) => (
     <StyledSvg
         viewBox="0 0 24 24"
         strokeWidth={1.25}
-        stroke="#2c3e50"
+        stroke="white"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
