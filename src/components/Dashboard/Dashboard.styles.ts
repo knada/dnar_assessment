@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const DashboardContainer = styled.div`
     min-height: 100vh;
     background-color: ${props => props.theme.colors.dashboardBg};
+    @media screen and (min-width: ${props => props.theme.breakpoints.sm}px) {
+        margin-left: 6rem;
+    }
+    @media screen and (min-width: ${props => props.theme.breakpoints.lg}px) {
+        margin-left: 16rem;
+    }
 `;
 
 export const DashboardContentContainer = styled.div``;
