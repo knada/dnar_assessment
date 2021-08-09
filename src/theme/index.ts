@@ -11,6 +11,7 @@ const typography = {
 };
 
 const breakpoints = {
+    xs: 414,
     sm: 576,
     md: 768,
     lg: 992,
