@@ -14,5 +14,6 @@ export const GlobalStyles = createGlobalStyle`
         color: white;
         text-rendering: optimizeLegibility;
         position: relative;
+        background-color: #201e26;
     }
 `;
