@@ -23,13 +23,13 @@ const iconStyle = css`
 const SideBar: FC = () => {
     return (
         <SideBarContainer>
+            <SidebarHeader>
+                <SideBarMenuButton>
+                    <MenuIcon iconStyle={iconStyle} />
+                </SideBarMenuButton>
+                <SideBarBrand>Logo</SideBarBrand>
+            </SidebarHeader>
             <SideBarMenu>
-                <SidebarHeader>
-                    <SideBarMenuButton>
-                        <MenuIcon iconStyle={iconStyle} />
-                    </SideBarMenuButton>
-                    <SideBarBrand>Logo</SideBarBrand>
-                </SidebarHeader>
                 <SideBarMenuItem>
                     <SideBarMenuLink to="/">
                         <SideBarMenuIcon>
