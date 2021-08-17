@@ -19,7 +19,7 @@ export const SideBarContainer = styled.div`
 `;
 
 export const SidebarHeader = styled.div`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 1rem;
     margin: 0.25rem 0.5rem;
     margin-top: 0;
@@ -72,7 +72,7 @@ export const SideBarMenuLink = styled(Link)`
     &:hover {
         background-color: hsl(0, 0%, 10%);
     }
-    border: 1px solid red;
+    /* border: 1px solid red; */
 `;
 
 export const SideBarMenuIcon = styled.div`
