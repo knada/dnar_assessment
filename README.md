@@ -1,3 +1,5 @@
 # Solution to dnar public front-end developer assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is just a demo app that was built for an assessment.
+
+Live app can be found here: https://infallible-payne-6b4982.netlify.app/
